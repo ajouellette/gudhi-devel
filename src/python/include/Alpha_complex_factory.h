@@ -160,11 +160,11 @@ class Alpha_complex_3D final : public Abstract_alpha_complex {
     }
 
   public:
-    Alpha_complex_3D(const std::vector<std::vector<std::vector<double>>& points)
+    Alpha_complex_3D(const std::vector<std::vector<double>>& points)
       : alpha_complex_(boost::adaptors::transform(points, pt_cython_to_cgal_3)) {
     }
 
-    Alpha_complex_3D(const std::vector<std::vector<std::vector<double>>& points, const std::vector<double& weights)
+    Alpha_complex_3D(const std::vector<std::vector<double>>& points, const std::vector<double>& weights)
       : alpha_complex_(boost::adaptors::transform(points, pt_cython_to_cgal_3), weights) {
     }
 
